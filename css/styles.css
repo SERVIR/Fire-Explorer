@@ -1,0 +1,49 @@
+.title  {
+	margin-bottom:5px;
+	font-weight:bold;
+}
+#fireAttributeValueDropDownBox, #startDateDropDownBox, #fireAttributeDropDownBox {
+	float:left;
+}
+.attrDiv {
+	margin-bottom:10px;
+	height: 25px;
+}
+.info {
+	float:right;
+	margin-top:-6px;
+}
+.info:hover  {
+	cursor:help;	
+}
+#mapDiv {
+	height:600px;
+	width:800px;	
+}
+ .loading {
+	position:absolute;
+	left:50%;
+	top:50%;
+	min-height: 80px; 
+	width:100px;
+	margin-left: -50px;
+	background: url(../../base_classes/images/white_load.gif) no-repeat 50% 35% #333333;
+	z-index: 31; 
+	-moz-border-radius: 10px;
+	border-radius: 10px; 
+	display:none; 
+	text-align: center;
+	padding: 10px 0;
+	margin-top: -40px;
+}
+.loading .msg {
+	font-size: 15px;
+	color: white;
+	margin-top: 58px;
+}
+
+.dijitTooltipContainer {
+	
+	border: solid #333 2px;
+	width:400px;
+}

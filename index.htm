@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+	<head>		
+		<title>QA Prototypes</title>
+        <link rel="stylesheet" type="text/css" href= "http://serverapi.arcgisonline.com/jsapi/arcgis/2.7/js/dojo/dijit/themes/tundra/tundra.css"/>	
+        <link href="../base_classes/styles/Layout.css" rel="stylesheet" type="text/css" />
+		<link href="../base_classes/styles/MapLayers.css" rel="stylesheet" type="text/css" />
+		<link href="../base_classes/styles/BaseMapTool.css" rel="stylesheet" type="text/css" />
+		<link href="../base_classes/styles/LayerListTool.css" rel="stylesheet" type="text/css" />
+		<link href="styles/styles.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body class="tundra">
+		<div id="header">
+		    <img id="headerLogo" src="../base_classes/images/servir_logo.png" alt="servir_logo"/>
+		    <div id="headerTitle"></div>
+		</div>
+		<div id="mapToolbar">
+			 <a id="mapLayers" href="#"> 
+                <img src="../base_classes/images/mapLayers_Blue_Default.png" alt="maplayers" name="mapLayers"/> 
+             </a>			
+             <a id="baseMapToolButton" href="#"> 
+                <img src="../base_classes/images/baseMapTool_Blue_Default.png" alt="basemaptool" id="baseLayers" name="baseLayersImg"/> 
+             </a> 
+		</div>		
+		<div id="mapContainer">
+		    <div id="map" class="shadow"></div>
+		</div>
+		<div id="footer">
+		    <span style="position: absolute; top:5px; right:10px;">&#169; 2012 SERVIR Reference Node Prototype.&nbsp;&nbsp;All rights reserved.</span>
+		</div>
+		<div id="baseMapToolPanel" style="display:none;">
+			<table>
+				<tr>
+					<td>
+						<img id="baseMapAerial" src="../base_classes/images/baseMap_Imagery_Default.png" name="baseMapAerial" alt="baseMapAerial"/><br /><br />
+					</td>
+					<td>
+						<img id="baseMapStreets" src="../base_classes/images/baseMap_Streets_Default.png" name="baseMapStreets" alt="baseMapStreets"/><br /><br />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img id="baseMapTopo" src="../base_classes/images/baseMap_Topographic_Default.png" name="baseMapTopo" alt="baseMapTopo"/><br /><br />
+					</td>
+					<td>
+						<img id="baseMapTerrain" src="../base_classes/images/baseMap_Terrain_Default.png" name="baseMapTerrain" alt="baseMapTerrain"/><br /><br />
+					</td>
+				</tr>
+			</table>
+		</div>	
+		
+		<!-- LAYER LIST TOOL -->
+		<div id="layerListDialog" dojotype="dijit.Dialog" title="Layers">
+		
+			<div class="title">Attribute:</div>
+			<div class="attrDiv">
+				<div id="fireAttributeDropDownBox"></div>
+				<div id="attributeInfo" class="info">
+					<img src="../base_classes/images/info.png" height="32px" width="32px">
+				</div>
+			</div>
+			
+			<div class="title">Attribute Values:</div>
+			<div class="attrDiv">
+				<div id="fireAttributeValueDropDownBox"></div>			
+				<div id="valueInfo" class="info">
+					<img src="../base_classes/images/info.png" height="32px" width="32px">
+				</div>
+			</div>
+			
+			<div class="title">Choose a day:</div>
+			<div class="attrDiv">
+				<div id="startDateDropDownBox"></div>
+				<div id="dateInfo" class="info">
+					<img src="../base_classes/images/info.png" height="32px" width="32px">
+				</div>
+			</div>
+		</div>	
+		
+		<script type="text/javascript" src="http://serverapi.arcgisonline.com/jsapi/arcgis/?v=2.7"></script>
+       	<script type="text/javascript">
+       		dojo.require("esri.map");
+       		dojo.require("dijit.Dialog");
+       		dojo.require("dojo.fx");
+       		dojo.require("dijit.form.CheckBox");
+       		dojo.require("dijit.form.Slider");
+       		dojo.require("dojo.data.ItemFileReadStore");
+       		dojo.require("dojo.data.ItemFileWriteStore");
+       		dojo.require("dijit.form.ComboBox");
+            dojo.require("dijit.form.DateTextBox");
+            dojo.require("dojox.form.RangeSlider");
+            dojo.require("dijit.form.DropDownButton");
+            dojo.require("dijit.TooltipDialog");
+       	</script>
+       	<script src="../base_classes/scripts/Utilities.js" type="text/javascript"></script>
+       	<script src="../base_classes/scripts/BasemapController.js" type="text/javascript"></script>
+       	<script src="../base_classes/scripts/IdentifyController.js" type="text/javascript"></script>
+       	<script src="../base_classes/scripts/LayerController.js" type="text/javascript"></script>
+       	<script src="../base_classes/scripts/MapServiceLoader.js" type="text/javascript"></script>
+       	<script src="../base_classes/scripts/ServicesConfig.js" type="text/javascript"></script>
+      	<script src="../base_classes/scripts/Shared.js" type="text/javascript"></script>
+       	<script src="scripts/Fire.js" type="text/javascript"></script>
+	</body>
+</html>
